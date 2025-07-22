@@ -1,0 +1,10 @@
+<launch>
+    <!-- 全局的 test_param -->
+    <param name="object_name" value="landing" />
+
+    <node name='object_darknet' pkg="object_darknet" type="object_darknet" output="screen">
+		<remap from = "/camera/color/image_raw"      to = "/usb_cam/image_raw"/>
+		<remap from = "/camera/depth/camera_info"    to = "/usb_cam/camera_info"/>
+	</node>
+
+</launch>
